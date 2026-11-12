@@ -1,20 +1,25 @@
 # Lifegumi Public
 
-本地动画、影视、阅读和游戏收藏工具。支持 Bangumi 导入与同步、统计、追更、时光机和轻记事本。首次运行使用空数据库，数据存放在独立的 `data-public/`。
+用于整理游戏、动画、影视和阅读记录的 Windows 桌面应用。可以记录状态、评分和备注，按分类筛选收藏，也可以通过统计和时间线回顾记录。
+
+## 下载和使用
+
+在 [Releases](https://github.com/BJ583/Lifegumi/releases) 的 **Assets** 中下载 Windows x64 便携包，完整解压后双击 `Lifegumi Public.exe`。移动程序时请保留整个解压目录。
+
+首次启动会创建空库，数据保存在本地的 `data-public/` 目录。备份收藏时请一起备份这个目录。
+
+## 功能
+
+- 按游戏、动画、影视和书籍分类整理收藏，支持搜索、筛选和排序。
+- 记录评分、通关状态和观看进度，通过统计、追更页和发售时间线回顾收藏。
+- 支持 Bangumi 链接导入；账号同步需要自行配置 Access Token。豆瓣条目可手动录入并保存资料链接。
+- 使用轻记事本整理随手记录。
+
+## 从源码运行
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
-pnpm build
-pnpm dist
 ```
 
-`pnpm dist` 生成 Windows 便携目录。请勿将本地数据目录或 Token 提交到 GitHub。
-
-## 打开 Windows 便携版
-
-双击 `release/win-unpacked/Lifegumi Public.exe`。移动或分享时请保留整个 `win-unpacked` 目录，不能只复制 exe。此目录在 Git 中被忽略，可单独作为 GitHub Release 分发；请勿附带运行后创建的 `data-public/`。
-
-程序的 L 字母图标由简单几何图形绘制，没有使用字体、第三方图片或品牌素材。
-
-豆瓣条目可手动录入，并在资料链接中保存原网址。公开版不会自动读取豆瓣页面或下载其封面。
+运行 `pnpm run dist` 可构建 Windows 便携版，产物位于 `release/win-unpacked/`。
