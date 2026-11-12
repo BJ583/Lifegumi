@@ -1,0 +1,46 @@
+{
+  "name": "lifegumi",
+  "version": "0.1.0",
+  "description": "Personal anime, media and game library",
+  "main": "electron/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
+    "build": "vite build",
+    "electron": "electron .",
+    "dist": "vite build && electron-builder --win --dir --publish=never"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "sql.js": "^1.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.0.7",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "local.lifegumi.public",
+    "productName": "Lifegumi Public",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "node_modules/sql.js/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "dir",
+      "icon": "electron/assets/icon.ico"
+    },
+    "icon": "electron/assets/icon.ico"
+  }
+}
