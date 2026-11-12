@@ -15,6 +15,5 @@ pnpm dist
 
 双击 `release/win-unpacked/Lifegumi Public.exe`。移动或分享时请保留整个 `win-unpacked` 目录，不能只复制 exe。此目录在 Git 中被忽略，可单独作为 GitHub Release 分发；请勿附带运行后创建的 `data-public/`。
 
-程序的 L 字母图标由简单几何图形绘制，没有使用字体、第三方图片或品牌素材。
 
-豆瓣条目可手动录入，并在资料链接中保存原网址。公开版不会自动读取豆瓣页面或下载其封面。
+豆瓣条目可手动录入，并在资料链接中保存原网址。
